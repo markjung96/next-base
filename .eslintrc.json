@@ -3,8 +3,7 @@
     "browser": true, // 브라우저 전역 변수를 ESLint 전역 변수로 선언
     "es2021": true, // ES12 문법을 사용
     "node": true, // Node.js 전역 변수를 ESLint 전역 변수로 선언
-    "jest": true, // Jest 테스트 환경에서 사용하는 전역 변수를 ESLint 전역 변수로 선언
-    "cypress/globals": true // Cypress 테스트 환경에서 사용하는 전역 변수를 ESLint 전역 변수로 선언
+    "jest": true // Jest 테스트 환경에서 사용하는 전역 변수를 ESLint 전역 변수로 선언
   },
   "rules": {
     "no-console": "warn", // console.log 사용 시 경고
