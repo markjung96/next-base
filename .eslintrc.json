@@ -1,3 +1,44 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true, // 브라우저 전역 변수를 ESLint 전역 변수로 선언
+    "es2021": true, // ES12 문법을 사용
+    "node": true, // Node.js 전역 변수를 ESLint 전역 변수로 선언
+    "jest": true, // Jest 테스트 환경에서 사용하는 전역 변수를 ESLint 전역 변수로 선언
+    "cypress/globals": true // Cypress 테스트 환경에서 사용하는 전역 변수를 ESLint 전역 변수로 선언
+  },
+  "rules": {
+    "no-console": "warn", // console.log 사용 시 경고
+    "prettier/prettier": "error", // prettier 에러 발생 시 중단
+    "arrow-body-style": [
+      "error",
+      "as-needed",
+      { "requireReturnForObjectLiteral": true } // 화살표 함수의 반환값이 객체일 때 항상 괄호를 사용
+    ],
+    "func-style": ["error", "expression"], // 함수 표현식만 허용
+    "prefer-arrow-callback": "error", // 콜백 함수에 화살표 함수 사용
+    "react/react-in-jsx-scope": "off", // Next.js에서는 React를 import하지 않아도 사용 가능
+    "no-unused-expressions": "off", // JSX에서는 사용하지 않는 표현식이 있을 수 있음
+    "import/extensions": "off", // 파일 확장자를 명시하지 않아도 되도록 설정
+    "import/no-unresolved": "off", // 파일 확장자를 명시하지 않아도 되도록 설정
+    "import/prefer-default-export": "off", // export default를 사용하지 않아도 되도록 설정
+    "no-nested-ternary": "error", // 삼항 연산자 중첩 사용 금지
+    "react/jsx-filename-extention": "off",
+    "spaced-comment": "off", // 주석 앞에 공백을 사용하지 않아도 되도록 설정
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off", // JSX에서는 사용하지 않는 변수가 있을 수 있음
+    "@typescript-eslint/explicit-module-boundary-types": "off", // 함수 반환값의 타입을 명시하지 않아도 되도록 설정
+    "@typescript-eslint/explicit-function-return-type": "off", // 함수 반환값의 타입을 명시하지 않아도 되도록 설정
+    "@typescript-eslint/no-non-null-assertion": "off" // ! 연산자 사용을 허용
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "next",
+    "prettier",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@next/next/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:storybook/recommended"
+  ]
 }
