@@ -1,0 +1,11 @@
+#!/bin/sh
+
+current_branch=$(git branch --show-current)
+main_branch="main"
+
+if [ "$current_branch" = "$main_branch" ]; then
+    echo "Direct push to main branch is not allowed."
+    exit 1
+fi
+
+exit 0
